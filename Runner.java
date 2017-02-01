@@ -5,13 +5,21 @@ public class Runner
 		//Runner for Student Class
 		Student tom = new Student("Tom", 16); 
 		Student jem = new Student("Jem", 12); 
+		Student newborn = new Student("Drew"); 
 		
 		System.out.println(tom); 
 		System.out.println(jem); 
+		System.out.println(newborn);
 		
 		System.out.println("Jeremy had a birthday!"); 
 		jem.hasBirthday(); 
+		
+		System.out.println("Drew had two birthdays!"); 
+		newborn.hasBirthday(); 
+		newborn.hasBirthday(); 
+		
 		System.out.println("Jeremy is now " + jem.returnAge() + " years old."); 
+		System.out.println("Drew is now " + newborn.returnAge() + " years old."); 
 		
 		System.out.println("The age of the oldest student is: " + Student.returnOldest()); 
 		
