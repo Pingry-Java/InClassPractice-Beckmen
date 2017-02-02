@@ -42,6 +42,26 @@ public class Course
 		grades.set(indexInArray, grade); 
 	}
 	
+	/**
+	 * Kicks the student with the highest grade out of the class.
+	 * @return The student who was removed from the class
+	 */ 
+	public Student dropOverachiever()
+	{
+		double greatestGrade = 0; 
+		int indexGreatest = 0; 
+		for (int i = 0; i < grades.size(); i++)
+		{
+			if (grades.get(i) > greatestGrade)
+			{
+				greatestGrade = grades.get(i); 
+				indexGreatest = i; 
+			}
+		}
+		grades.remove(indexGreatest); 
+		return students.remove(indexGreatest); 
+	}
+	
 	public int getEnrollment()
 	{
 		return students.size(); 
